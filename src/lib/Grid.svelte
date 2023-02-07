@@ -20,6 +20,7 @@
 			 * GridItem data object.
 			 */
 			item: LayoutItem<T>;
+			moveStart?: (event: PointerEvent) => void;
 		};
 		loader: Record<string, never>;
 	}
@@ -228,8 +229,9 @@
 				resizerClass={itemResizerClass}
 				on:itemchange={handleItemChange}
 				on:previewchange={updateGridDimensions}
+				let:moveStart
 			>
-				<slot {item} />
+				<slot {item} {moveStart} />
 			</GridItem>
 		{/each}
 	{:else}

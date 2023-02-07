@@ -238,7 +238,7 @@
 			${movable ? 'cursor: move;' : ''} touch-action: none; user-select: none;`}
 	bind:this={itemRef}
 >
-	<slot />
+	<slot {moveStart} />
 	{#if resizable}
 		<slot name="resizeHandle">
 			<div
