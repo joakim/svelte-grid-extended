@@ -89,8 +89,8 @@
 
 	let pointerShift = { left: 0, top: 0 };
 
-	function moveStart(event: PointerEvent) {
-		if (!movable) return;
+	function moveStart(event: PointerEvent, override = false) {
+		if (!movable && !override) return;
 		if (event.button !== 0) return;
 		initInteraction(event);
 		initialPosition = { left, top };
