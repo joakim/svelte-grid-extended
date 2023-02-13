@@ -85,7 +85,7 @@
 
 	let initialPosition = { left: 0, top: 0 };
 
-	$: movable = !gridParams.readOnly && item.movable === undefined && item.movable !== false;
+	$: movable = !gridParams.readOnly && item.movable !== false;
 
 	let pointerShift = { left: 0, top: 0 };
 
