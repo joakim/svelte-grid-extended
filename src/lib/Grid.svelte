@@ -20,7 +20,7 @@
 			 * GridItem data object.
 			 */
 			item: LayoutItem<T>;
-			moveStart?: (event: PointerEvent) => void;
+			moveStart?: (event: PointerEvent, override?: boolean) => void;
 		};
 		loader: Record<string, never>;
 	}
